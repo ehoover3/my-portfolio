@@ -1,30 +1,27 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-
-import bugtracker from "../images/bugtracker.png";
-import payroll from "../images/payroll.png";
-import marketing from "../images/marketing.png";
+import { AiFillBug, AiFillPieChart } from "react-icons/ai";
+import { BsChatTextFill } from "react-icons/bs";
 
 export default function Projects() {
+  // styles
   const wrapperStyle = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     marginTop: "35px",
   };
+  const cardStyle = { display: "flex", textAlign: "center", alignItems: "center" };
+  const imgStyle = { margin: "20px", fontSize: 90 };
 
   // jsx section
   return (
     <div style={wrapperStyle} id='projects'>
       <h2 style={{ marginTop: "65px" }}>PROJECTS</h2>
       <CardGroup>
-        <Card>
-          <Card.Img
-            variant='top'
-            src={bugtracker}
-            alt='magnifying glass inspecting an image of a bug on a monitor'
-          />
+        <Card style={cardStyle}>
+          <AiFillBug style={imgStyle} />
           <Card.Body>
             <Card.Title>Bug Tracker</Card.Title>
             <Card.Text>
@@ -32,21 +29,21 @@ export default function Projects() {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className='text-muted'>ReactJS, MongoDB, CSS, and Bootstrap</small>
+            <small className='text-muted'>ReactJS, MongoDB, CSS, Bootstrap</small>
           </Card.Footer>
         </Card>
-        <Card>
-          <Card.Img variant='top' src={payroll} alt='a document with bar graphs on it' />
+        <Card style={cardStyle}>
+          <AiFillPieChart style={imgStyle} />
           <Card.Body>
             <Card.Title>Payroll Portal</Card.Title>
             <Card.Text>This app creates users and generates printable reports</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className='text-muted'>ReactJS, MongoDB, CSS, and Bootstrap</small>
+            <small className='text-muted'>ReactJS, MongoDB, CSS, Bootstrap</small>
           </Card.Footer>
         </Card>
-        <Card>
-          <Card.Img variant='top' src={marketing} alt='an opened envelope' />
+        <Card style={cardStyle}>
+          <BsChatTextFill style={imgStyle} />
           <Card.Body>
             <Card.Title>Marketing Website</Card.Title>
             <Card.Text>
@@ -54,7 +51,7 @@ export default function Projects() {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className='text-muted'>ReactJS, MongoDB, CSS, and Bootstrap</small>
+            <small className='text-muted'>ReactJS, MongoDB, CSS, Bootstrap</small>
           </Card.Footer>
         </Card>
       </CardGroup>

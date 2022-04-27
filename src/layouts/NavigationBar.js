@@ -5,11 +5,10 @@ import Container from "react-bootstrap/Container";
 
 export default function NavigationBar(props) {
   let theme = props.theme;
-  const handleTheme = props.handleTheme;
 
   return (
-    <Navbar bg={theme} variant='dark' sticky='top'>
-      <Container onClick={handleTheme}>
+    <Navbar bg={theme.bootstrap} variant='dark' sticky='top'>
+      <Container>
         <Navbar.Brand href='#home'>ERIC HOOVER</Navbar.Brand>
         <Nav className='me-auto'>
           <Nav.Link href='#about'>About</Nav.Link>
