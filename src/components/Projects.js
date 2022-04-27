@@ -2,9 +2,9 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 
-import { useSelector } from "react-redux"; // gets data from the store
-import { useDispatch } from "react-redux"; // updates the store data
-import { changeColor } from "../store/colorStore"; // updates the store data
+// import { useSelector } from "react-redux"; // gets data from the store
+// import { useDispatch } from "react-redux"; // updates the store data
+// import { changeColor } from "../store/colorStore"; // updates the store data
 
 export default function Projects() {
   // vanilla js section
@@ -15,15 +15,13 @@ export default function Projects() {
     marginTop: "100px",
   };
 
-  const dispatch = useDispatch(); // send info (a.k.a. "state") to the store
-  const color = useSelector((state) => state.colorStore.color); // get initial value from store
+  // const dispatch = useDispatch(); // send info (a.k.a. "state") to the store
+  // const color = useSelector((state) => state.colorStore.color); // get initial value from store
 
   // jsx section
   return (
     <div style={wrapperStyle}>
-      <h2 style={{ color: color }} onClick={() => dispatch(changeColor())}>
-        PROJECTS
-      </h2>
+      <h2>PROJECTS</h2>
       <CardGroup>
         <Card>
           <Card.Img variant='top' src='holder.js/100px160' />
