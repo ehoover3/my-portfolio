@@ -2,12 +2,11 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 
-// import { useSelector } from "react-redux"; // gets data from the store
-// import { useDispatch } from "react-redux"; // updates the store data
-// import { changeColor } from "../store/colorStore"; // updates the store data
+import bugtracker from "../images/bugtracker.png";
+import payroll from "../images/payroll.png";
+import marketing from "../images/marketing.png";
 
 export default function Projects() {
-  // vanilla js section
   const wrapperStyle = {
     display: "flex",
     flexDirection: "column",
@@ -15,16 +14,17 @@ export default function Projects() {
     marginTop: "100px",
   };
 
-  // const dispatch = useDispatch(); // send info (a.k.a. "state") to the store
-  // const color = useSelector((state) => state.colorStore.color); // get initial value from store
-
   // jsx section
   return (
     <div style={wrapperStyle}>
       <h2>PROJECTS</h2>
       <CardGroup>
         <Card>
-          <Card.Img variant='top' src='holder.js/100px160' />
+          <Card.Img
+            variant='top'
+            src={bugtracker}
+            alt='magnifying glass inspecting an image of a bug on a monitor'
+          />
           <Card.Body>
             <Card.Title>Bug Tracker</Card.Title>
             <Card.Text>
@@ -36,7 +36,7 @@ export default function Projects() {
           </Card.Footer>
         </Card>
         <Card>
-          <Card.Img variant='top' src='holder.js/100px160' />
+          <Card.Img variant='top' src={payroll} alt='a document with bar graphs on it' />
           <Card.Body>
             <Card.Title>Payroll Portal</Card.Title>
             <Card.Text>This app creates users and generates printable reports</Card.Text>
@@ -46,7 +46,7 @@ export default function Projects() {
           </Card.Footer>
         </Card>
         <Card>
-          <Card.Img variant='top' src='holder.js/100px160' />
+          <Card.Img variant='top' src={marketing} alt='an opened envelope' />
           <Card.Body>
             <Card.Title>Marketing Website</Card.Title>
             <Card.Text>
