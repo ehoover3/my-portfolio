@@ -1,10 +1,13 @@
 import React from "react";
+import AnimateLetters from "../components/AnimateLetters";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { AiFillBug, AiFillPieChart } from "react-icons/ai";
 import { BsChatTextFill } from "react-icons/bs";
 
-export default function Projects() {
+export default function Projects(props) {
+  const handleTheme = props.handleTheme;
+
   // styles
   const wrapperStyle = {
     display: "flex",
@@ -18,7 +21,9 @@ export default function Projects() {
   // jsx section
   return (
     <div style={wrapperStyle} id='projects'>
-      <h2 style={{ marginTop: "65px" }}>PROJECTS</h2>
+      <div style={{ marginTop: "65px" }}> </div>
+      <AnimateLetters words='PROJECTS' handleTheme={handleTheme} />
+
       <CardGroup>
         <Card style={cardStyle}>
           <AiFillBug style={imgStyle} />

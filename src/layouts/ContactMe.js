@@ -1,8 +1,11 @@
 import React from "react";
+import AnimateLetters from "../components/AnimateLetters";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-export default function ContactMe() {
+export default function ContactMe(props) {
+  const handleTheme = props.handleTheme;
+
   const wrapperStyle = {
     display: "flex",
     flexDirection: "column",
@@ -13,7 +16,9 @@ export default function ContactMe() {
 
   return (
     <div style={wrapperStyle} id='contact'>
-      <h2 style={{ marginTop: "65px" }}>CONTACT ME</h2>
+      <div style={{ marginTop: "65px" }}> </div>
+      <AnimateLetters words='CONTACT ME' handleTheme={handleTheme} />
+
       <Form>
         <Form.Group className='mb-3' controlId='formBasicName'>
           <Form.Control type='name' placeholder='Name' />
