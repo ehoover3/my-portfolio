@@ -7,6 +7,7 @@ import { BsChatTextFill } from "react-icons/bs";
 
 export default function Projects(props) {
   const handleTheme = props.handleTheme;
+  const theme = props.theme;
 
   // styles
   const wrapperStyle = {
@@ -15,7 +16,12 @@ export default function Projects(props) {
     alignItems: "center",
     marginTop: "35px",
   };
-  const cardStyle = { display: "flex", textAlign: "center", alignItems: "center" };
+  const cardStyle = {
+    display: "flex",
+    textAlign: "center",
+    alignItems: "center",
+    marginRight: "2.5vw",
+  };
   const imgStyle = { margin: "20px", fontSize: 90 };
 
   // jsx section
@@ -24,8 +30,8 @@ export default function Projects(props) {
       <div style={{ marginTop: "65px" }}> </div>
       <AnimateLetters words='PROJECTS' handleTheme={handleTheme} />
 
-      <CardGroup>
-        <Card style={cardStyle}>
+      <CardGroup style={{ marginLeft: "2.5vw" }}>
+        <Card style={cardStyle} bg={theme.style.bootstrap} text={"white"}>
           <AiFillBug style={imgStyle} />
           <Card.Body>
             <Card.Title>Bug Tracker</Card.Title>
@@ -34,20 +40,20 @@ export default function Projects(props) {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className='text-muted'>ReactJS, MongoDB, CSS, Bootstrap</small>
+            <small>ReactJS, MongoDB, CSS, Bootstrap</small>
           </Card.Footer>
         </Card>
-        <Card style={cardStyle}>
+        <Card style={cardStyle} bg={theme.style.bootstrap} text={"white"}>
           <AiFillPieChart style={imgStyle} />
           <Card.Body>
             <Card.Title>Payroll Portal</Card.Title>
             <Card.Text>This app creates users and generates printable reports</Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className='text-muted'>ReactJS, MongoDB, CSS, Bootstrap</small>
+            <small>ReactJS, MongoDB, CSS, Bootstrap</small>
           </Card.Footer>
         </Card>
-        <Card style={cardStyle}>
+        <Card style={cardStyle} bg={theme.style.bootstrap} text={"white"}>
           <BsChatTextFill style={imgStyle} />
           <Card.Body>
             <Card.Title>Marketing Website</Card.Title>
@@ -56,7 +62,7 @@ export default function Projects(props) {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <small className='text-muted'>ReactJS, MongoDB, CSS, Bootstrap</small>
+            <small style={{}}>ReactJS, MongoDB, CSS, Bootstrap</small>
           </Card.Footer>
         </Card>
       </CardGroup>

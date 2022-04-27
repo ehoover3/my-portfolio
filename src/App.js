@@ -9,43 +9,55 @@ import ContactMe from "./layouts/ContactMe";
 
 export default function App() {
   const [theme, setTheme] = useState({
-    bootstrap: "dark",
-    primaryColor: "#212529",
-    primaryFont: "white",
-    backgroundColor: "#C9A5D5",
+    class: "accordionColorsSuccess",
+    style: {
+      bootstrap: "success",
+      primaryColor: "#1a8654",
+      primaryFont: "white",
+      backgroundColor: "#F5E0B7",
+    },
   });
 
   const handleTheme = () => {
-    if (theme.bootstrap === "dark")
+    if (theme.style.bootstrap === "dark")
       setTheme({
-        bootstrap: "primary",
-        primaryColor: "#0c6dfd",
-        primaryFont: "white",
-        backgroundColor: "#92DCE5",
+        class: "accordionColorsPrimary",
+        style: {
+          bootstrap: "primary",
+          primaryColor: "#0c6dfd",
+          primaryFont: "white",
+          backgroundColor: "#92DCE5",
+        },
       });
-    else if (theme.bootstrap === "primary")
+    else if (theme.style.bootstrap === "primary")
       setTheme({
-        bootstrap: "success",
-        primaryColor: "#1a8654",
-        primaryFont: "white",
-        backgroundColor: "#F5E0B7",
+        class: "accordionColorsSuccess",
+        style: {
+          bootstrap: "success",
+          primaryColor: "#1a8654",
+          primaryFont: "white",
+          backgroundColor: "#F5E0B7",
+        },
       });
-    else if (theme.bootstrap === "success")
+    else if (theme.style.bootstrap === "success")
       setTheme({
-        bootstrap: "dark",
-        primaryColor: "#212529",
-        primaryFont: "white",
-        backgroundColor: "#F2DC5D",
+        class: "accordionColorsDark",
+        style: {
+          bootstrap: "dark",
+          primaryColor: "#212529",
+          primaryFont: "white",
+          backgroundColor: "#F2DC5D",
+        },
       });
   };
 
   return (
-    <div style={{ backgroundColor: theme.backgroundColor }}>
+    <div style={{ backgroundColor: theme.style.backgroundColor }}>
       <NavigationBar theme={theme} />
       <Home theme={theme} handleTheme={handleTheme} />
-      <About handleTheme={handleTheme} />
-      <Projects handleTheme={handleTheme} />
-      <ContactMe handleTheme={handleTheme} />
+      <About theme={theme} handleTheme={handleTheme} />
+      <Projects theme={theme} handleTheme={handleTheme} />
+      <ContactMe theme={theme} handleTheme={handleTheme} />
     </div>
   );
 }

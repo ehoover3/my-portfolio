@@ -10,6 +10,7 @@ import { FaDeaf, FaLaptopCode, FaCodeBranch } from "react-icons/fa";
 import { HiCursorClick } from "react-icons/hi";
 
 export default function About(props) {
+  const theme = props.theme;
   const handleTheme = props.handleTheme;
 
   const wrapperStyle = {
@@ -22,15 +23,17 @@ export default function About(props) {
   const cardTitleStyle = { display: "flex", justifyContent: "center", alignItems: "center" };
   const imgStyle = { margin: "20px", fontSize: 90 };
   const paragraphStyle = { margin: "5px" };
+  const accordionStyle = { marginLeft: "2.5vw", marginRight: "2.5vw" };
+  const accordionHeaderStyle = { color: "red", backgroundColor: "red" };
 
   return (
     <div style={wrapperStyle} id='about'>
       <div style={{ marginTop: "65px" }}> </div>
       <AnimateLetters words='ABOUT' handleTheme={handleTheme} />
 
-      <Accordion>
+      <Accordion style={accordionStyle}>
         <Accordion.Item eventKey='0'>
-          <Accordion.Header>Why I Value Accesibility</Accordion.Header>
+          <Accordion.Header className={theme.class}>Why I Value Accesibility</Accordion.Header>
           <Accordion.Body>
             <Card style={cardStyle}>
               <FaDeaf style={imgStyle} />
@@ -46,7 +49,7 @@ export default function About(props) {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='1'>
-          <Accordion.Header>How I First Started Coding</Accordion.Header>
+          <Accordion.Header className={theme.class}>How I First Started Coding</Accordion.Header>
           <Accordion.Body>
             <Card style={cardStyle}>
               <HiCursorClick style={imgStyle} />
@@ -61,7 +64,9 @@ export default function About(props) {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='2'>
-          <Accordion.Header>What I Teach as a Bootcamp Instructor</Accordion.Header>
+          <Accordion.Header className={theme.class}>
+            What I Teach as a Bootcamp Instructor
+          </Accordion.Header>
           <Accordion.Body>
             <Card style={cardStyle}>
               <FaLaptopCode style={imgStyle} />
@@ -72,7 +77,9 @@ export default function About(props) {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey='3'>
-          <Accordion.Header>Where I'm Headed as a Software Engineer</Accordion.Header>
+          <Accordion.Header className={theme.class}>
+            Where I'm Headed as a Software Engineer
+          </Accordion.Header>
           <Accordion.Body>
             <Card style={cardStyle}>
               <FaCodeBranch style={imgStyle} />

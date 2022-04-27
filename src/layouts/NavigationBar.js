@@ -7,7 +7,7 @@ export default function NavigationBar(props) {
   let theme = props.theme;
 
   return (
-    <Navbar bg={theme.bootstrap} variant='dark' sticky='top'>
+    <Navbar bg={theme.style.bootstrap} variant='dark' sticky='top'>
       <Container>
         <Navbar.Brand href='#home'>ERIC HOOVER</Navbar.Brand>
         <Nav className='me-auto'>
