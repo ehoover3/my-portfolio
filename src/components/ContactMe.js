@@ -3,11 +3,17 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 export default function ContactMe() {
-  const wrapperStyle = { textAlign: "center", marginTop: "100px" };
+  const wrapperStyle = {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+    marginTop: "100px",
+    marginBottom: "100px",
+  };
 
   return (
-    <div style={wrapperStyle}>
-      <h2>CONTACT ME</h2>
+    <div style={wrapperStyle} id='contact'>
+      <h2 style={{ marginTop: "65px" }}>CONTACT ME</h2>
       <Form>
         <Form.Group className='mb-3' controlId='formBasicName'>
           <Form.Control type='name' placeholder='Name' />

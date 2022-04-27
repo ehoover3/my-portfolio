@@ -11,13 +11,13 @@ export default function Projects() {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "100px",
+    marginTop: "35px",
   };
 
   // jsx section
   return (
-    <div style={wrapperStyle}>
-      <h2>PROJECTS</h2>
+    <div style={wrapperStyle} id='projects'>
+      <h2 style={{ marginTop: "65px" }}>PROJECTS</h2>
       <CardGroup>
         <Card>
           <Card.Img
