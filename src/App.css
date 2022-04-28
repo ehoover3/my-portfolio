@@ -22,7 +22,7 @@
 
 /* accordion collapsed */
 .accordionColorsPrimary > button {
-  background-color: rgb(12,109,253);
+  background-color: rgb(12, 109, 253);
   color: white;
 }
 .accordionColorsSuccess > button {
@@ -36,28 +36,37 @@
 
 /* accordion not collapsed */
 .accordionColorsPrimary > button:not(.collapsed) {
-  background-color: rgb(12,109,253);
+  background-color: rgb(12, 109, 253);
   color: white;
 }
-  .accordionColorsSuccess > button:not(.collapsed) {
-    background-color: rgb(26,134,84);
-        color: white;
-  }
-  .accordionColorsDark > button:not(.collapsed) {
-    background-color: rgb(33,37,41);
-    color: white;
-  }
- 
-  /* accordion not collapsed after */
-    .accordionColorsPrimary > button:not(.collapsed)::after {
-      color: white !important;
-      }
-    .accordionColorsSuccess > button:not(.collapsed)::after {
-      color: white !important;
-      }
-    .accordionColorsDark > button:not(.collapsed)::after {
-      color: white !important;
-      }
+.accordionColorsSuccess > button:not(.collapsed) {
+  background-color: rgb(26, 134, 84);
+  color: white;
+}
+.accordionColorsDark > button:not(.collapsed) {
+  background-color: rgb(33, 37, 41);
+  color: white;
+}
 
+/* accordion not collapsed after */
+.accordionColorsPrimary > button:not(.collapsed)::after {
+  color: white !important;
+}
+.accordionColorsSuccess > button:not(.collapsed)::after {
+  color: white !important;
+}
+.accordionColorsDark > button:not(.collapsed)::after {
+  color: white !important;
+}
 
- 
+/* Change Form Control Placeholder */
+.form-control::placeholder {
+  color: white !important; /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.9 !important; /* Firefox */
+}
+.form-control:-ms-input-placeholder {
+  color: white !important; /* Internet Explorer 10-11 */
+}
+.form-control::-ms-input-placeholder {
+  color: white !important; /* Microsoft Edge */
+}
