@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 import NavigationBar from "./layouts/NavigationBar";
@@ -10,11 +10,13 @@ import ContactMe from "./layouts/ContactMe";
 export default function App() {
   const [theme, setTheme] = useState({
     class: "accordionColorsSuccess",
+    primaryColorLight: "rgb(26,134,84,0.25)",
+    primaryColorLight_Card: "rgb(26,134,84,0)",
     style: {
       bootstrap: "success",
-      primaryColor: "#1a8654",
+      primaryColor: "rgb(26,134,84)",
       primaryFont: "white",
-      backgroundColor: "#F5E0B7",
+      backgroundColor: "rgb(245,224,183)",
     },
   });
 
@@ -22,34 +24,45 @@ export default function App() {
     if (theme.style.bootstrap === "dark")
       setTheme({
         class: "accordionColorsPrimary",
+        primaryColorLight: "rgb(12,109,253,0.25)",
+        primaryColorLight_Card: "rgb(12,109,253,0)",
         style: {
           bootstrap: "primary",
-          primaryColor: "#0c6dfd",
+          primaryColor: "rgb(12,109,253)",
           primaryFont: "white",
-          backgroundColor: "#92DCE5",
+          backgroundColor: "rgb(146,220,229)",
         },
       });
     else if (theme.style.bootstrap === "primary")
       setTheme({
         class: "accordionColorsSuccess",
+        primaryColorLight: "rgb(26,134,84,0.25)",
+        primaryColorLight_Card: "rgb(26,134,84,0)",
         style: {
           bootstrap: "success",
-          primaryColor: "#1a8654",
+          primaryColor: "rgb(26,134,84)",
           primaryFont: "white",
-          backgroundColor: "#F5E0B7",
+          backgroundColor: "rgb(245,224,183)",
         },
       });
     else if (theme.style.bootstrap === "success")
       setTheme({
         class: "accordionColorsDark",
+        primaryColorLight: "rgb(33,37,41,0.25)",
+        primaryColorLight_Card: "rgb(33,37,41,0)",
         style: {
           bootstrap: "dark",
-          primaryColor: "#212529",
+          primaryColor: "rgb(33,37,41)",
           primaryFont: "white",
-          backgroundColor: "#F2DC5D",
+          backgroundColor: "rgb(242,220,93)",
         },
       });
   };
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.body.style.backgroundColor = theme.style.backgroundColor;
+  });
 
   return (
     <div style={{ backgroundColor: theme.style.backgroundColor }}>

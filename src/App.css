@@ -22,7 +22,7 @@
 
 /* accordion collapsed */
 .accordionColorsPrimary > button {
-  background-color: #0c6dfd;
+  background-color: rgb(12,109,253);
   color: white;
 }
 .accordionColorsSuccess > button {
@@ -36,14 +36,28 @@
 
 /* accordion not collapsed */
 .accordionColorsPrimary > button:not(.collapsed) {
-  background-color: #0c6dfd;
+  background-color: rgb(12,109,253);
   color: white;
 }
   .accordionColorsSuccess > button:not(.collapsed) {
-    background-color: #1a8654;
+    background-color: rgb(26,134,84);
         color: white;
   }
   .accordionColorsDark > button:not(.collapsed) {
-    background-color: #212529;
+    background-color: rgb(33,37,41);
     color: white;
   }
+ 
+  /* accordion not collapsed after */
+    .accordionColorsPrimary > button:not(.collapsed)::after {
+      color: white !important;
+      }
+    .accordionColorsSuccess > button:not(.collapsed)::after {
+      color: white !important;
+      }
+    .accordionColorsDark > button:not(.collapsed)::after {
+      color: white !important;
+      }
+
+
+ 

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function AnimateLetters(props) {
-  let { words } = props;
+  let { words, titleStyle } = props;
 
   let handleTheme = props.handleTheme;
 
@@ -18,12 +18,20 @@ export default function AnimateLetters(props) {
   });
 
   //   JSX SECTION
-  return (
-    <h2
-      style={{ display: "flex", justifyContent: "center", cursor: "pointer" }}
-      onClick={handleTheme}
-    >
-      {wordsArray}
-    </h2>
-  );
+
+  if (titleStyle)
+    return (
+      <h2 style={titleStyle} onClick={handleTheme}>
+        {wordsArray}
+      </h2>
+    );
+  else
+    return (
+      <h2
+        style={{ display: "flex", justifyContent: "center", cursor: "pointer" }}
+        onClick={handleTheme}
+      >
+        {wordsArray}
+      </h2>
+    );
 }

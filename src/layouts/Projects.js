@@ -14,7 +14,9 @@ export default function Projects(props) {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "35px",
+    marginTop: "5px",
+    paddingBottom: "90px",
+    borderBottom: "1px solid black",
   };
   const cardStyle = {
     display: "flex",

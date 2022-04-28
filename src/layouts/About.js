@@ -18,23 +18,29 @@ export default function About(props) {
     flexDirection: "column",
     textAlign: "center",
     marginTop: "35px",
+    paddingBottom: "80px",
+    borderBottom: "1px solid black",
   };
-  const cardStyle = { display: "flex", flexDirection: "row" };
+  const cardStyle = {
+    display: "flex",
+    flexDirection: "row",
+    backgroundColor: theme.primaryColorLight_Card,
+    border: "0px",
+  };
   const cardTitleStyle = { display: "flex", justifyContent: "center", alignItems: "center" };
   const imgStyle = { margin: "20px", fontSize: 90 };
   const paragraphStyle = { margin: "5px" };
   const accordionStyle = { marginLeft: "2.5vw", marginRight: "2.5vw" };
-  const accordionHeaderStyle = { color: "red", backgroundColor: "red" };
 
   return (
     <div style={wrapperStyle} id='about'>
-      <div style={{ marginTop: "65px" }}> </div>
+      <div style={{ marginTop: "25px" }}> </div>
       <AnimateLetters words='ABOUT' handleTheme={handleTheme} />
 
       <Accordion style={accordionStyle}>
         <Accordion.Item eventKey='0'>
           <Accordion.Header className={theme.class}>Why I Value Accesibility</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: theme.primaryColorLight }}>
             <Card style={cardStyle}>
               <FaDeaf style={imgStyle} />
               <Card.Title style={cardTitleStyle}>
@@ -50,7 +56,7 @@ export default function About(props) {
         </Accordion.Item>
         <Accordion.Item eventKey='1'>
           <Accordion.Header className={theme.class}>How I First Started Coding</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: theme.primaryColorLight }}>
             <Card style={cardStyle}>
               <HiCursorClick style={imgStyle} />
               <Card.Title style={cardTitleStyle}>
@@ -67,11 +73,13 @@ export default function About(props) {
           <Accordion.Header className={theme.class}>
             What I Teach as a Bootcamp Instructor
           </Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: theme.primaryColorLight }}>
             <Card style={cardStyle}>
               <FaLaptopCode style={imgStyle} />
               <Card.Title style={cardTitleStyle}>
-                <p>I teach Javascript, CSS, HTML, React, Node, Express, MongoDB, and SQL.</p>
+                <p style={{ position: "relative", top: "10px" }}>
+                  I teach Javascript, CSS, HTML, React, Node, Express, MongoDB, and SQL.
+                </p>
               </Card.Title>
             </Card>
           </Accordion.Body>
@@ -80,11 +88,11 @@ export default function About(props) {
           <Accordion.Header className={theme.class}>
             Where I'm Headed as a Software Engineer
           </Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body style={{ backgroundColor: theme.primaryColorLight }}>
             <Card style={cardStyle}>
               <FaCodeBranch style={imgStyle} />
               <Card.Title style={cardTitleStyle}>
-                <p>
+                <p style={{ position: "relative", top: "10px" }}>
                   While I'm thankful to teach, my goal is to build great products and services that
                   improve people's quality of life.
                 </p>

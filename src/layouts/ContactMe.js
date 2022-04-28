@@ -10,7 +10,7 @@ export default function ContactMe(props) {
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    marginTop: "100px",
+    marginTop: "30px",
     marginBottom: "100px",
   };
 
