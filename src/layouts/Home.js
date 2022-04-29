@@ -29,7 +29,7 @@ export default function Home(props) {
       }}
     >
       <div>
-        <div style={{ fontSize: "45px" }}>Hello, my name is</div>
+        <div style={{ fontSize: "40px" }}>Hello, my name is</div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <FaUserAstronaut style={{ fontSize: "200px", color: theme.style.primaryColor }} />
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
@@ -39,7 +39,7 @@ export default function Home(props) {
         </div>
 
         <div style={{ display: "flex" }}>
-          <div style={{ fontSize: "45px" }}>Software Engineer</div>
+          <div style={{ fontSize: "40px" }}>Software Engineer</div>
           <Button
             variant={theme.style.bootstrap}
             type='submit'
