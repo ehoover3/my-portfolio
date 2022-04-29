@@ -57,7 +57,7 @@ export default function ContactMe(props) {
           <TiSocialLinkedin
             style={{
               color: theme.style.primaryColor,
-              fontSize: 150,
+              fontSize: 125,
               borderRadius: 15,
               border: "10px solid " + theme.style.primaryColor,
               backgroundColor: theme.primaryColorLight,
@@ -71,7 +71,7 @@ export default function ContactMe(props) {
           <RiGithubLine
             style={{
               color: theme.style.primaryColor,
-              fontSize: 150,
+              fontSize: 125,
               borderRadius: 15,
               border: "10px solid " + theme.style.primaryColor,
               backgroundColor: theme.primaryColorLight,
@@ -85,7 +85,7 @@ export default function ContactMe(props) {
           <AiOutlineMail
             style={{
               color: theme.style.primaryColor,
-              fontSize: 150,
+              fontSize: 125,
               borderRadius: 15,
               border: "10px solid " + theme.style.primaryColor,
               backgroundColor: theme.primaryColorLight,
