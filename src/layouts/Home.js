@@ -2,6 +2,7 @@ import React from "react";
 import { FaUserAstronaut } from "react-icons/fa";
 import AnimateLetters from "../components/AnimateLetters.js";
 import Button from "react-bootstrap/Button";
+import Resume from "../assets/Hoover_Resume.pdf";
 
 export default function Home(props) {
   const theme = props.theme;
@@ -43,7 +44,8 @@ export default function Home(props) {
           <Button
             variant={theme.style.bootstrap}
             type='submit'
-            style={{ margin: "10px", height: "50px" }}
+            style={{ margin: "10px", height: "50px", display: "flex", alignItems: "center" }}
+            href={Resume}
           >
             Download Resumé
           </Button>
