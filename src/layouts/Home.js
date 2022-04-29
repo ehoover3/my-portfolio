@@ -9,7 +9,7 @@ export default function Home(props) {
   const handleTheme = props.handleTheme;
 
   const titleStyle = {
-    fontSize: "90px",
+    fontSize: "75px",
     display: "flex",
     justifyContent: "center",
     cursor: "pointer",
