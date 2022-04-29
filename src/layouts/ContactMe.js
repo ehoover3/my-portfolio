@@ -64,7 +64,7 @@ export default function ContactMe(props) {
               cursor: "pointer",
             }}
           />
-          <div style={{ fontSize: "20px" }}>linkedin.com/in/hoov</div>
+          <div style={{ fontSize: "18px" }}>linkedin.com/in/hoov</div>
         </a>
 
         <a href='https://github.com/ehoover3' style={{ textDecoration: "none", color: "black" }}>
@@ -78,7 +78,7 @@ export default function ContactMe(props) {
               cursor: "pointer",
             }}
           />
-          <div style={{ fontSize: "20px" }}>github.com/ehoover3</div>
+          <div style={{ fontSize: "18px" }}>github.com/ehoover3</div>
         </a>
 
         <div style={{ textDecoration: "none", color: "black" }}>
@@ -96,7 +96,7 @@ export default function ContactMe(props) {
               navigator.clipboard.writeText("ehoover3@yahoo.com");
             }}
           />
-          <div style={{ fontSize: "20px" }}>ehoover3@yahoo.com</div>
+          <div style={{ fontSize: "18px" }}>ehoover3@yahoo.com</div>
           <EmailToast handleToast={handleToast} show={show} style={style} />
         </div>
       </div>
