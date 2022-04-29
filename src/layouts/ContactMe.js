@@ -5,6 +5,7 @@ import EmailToast from "../components/EmailToast";
 import { RiGithubLine } from "react-icons/ri";
 import { AiOutlineMail } from "react-icons/ai";
 import { TiSocialLinkedin } from "react-icons/ti";
+import "../App.css";
 
 export default function ContactMe(props) {
   // useState
@@ -63,7 +64,7 @@ export default function ContactMe(props) {
               cursor: "pointer",
             }}
           />
-          <div style={{ fontSize: "25px" }}>linkedin.com/in/hoov</div>
+          <div style={{ fontSize: "20px" }}>linkedin.com/in/hoov</div>
         </a>
 
         <a href='https://github.com/ehoover3' style={{ textDecoration: "none", color: "black" }}>
@@ -77,7 +78,7 @@ export default function ContactMe(props) {
               cursor: "pointer",
             }}
           />
-          <div style={{ fontSize: "25px" }}>github.com/ehoover3</div>
+          <div style={{ fontSize: "20px" }}>github.com/ehoover3</div>
         </a>
 
         <div style={{ textDecoration: "none", color: "black" }}>
@@ -95,7 +96,7 @@ export default function ContactMe(props) {
               navigator.clipboard.writeText("ehoover3@yahoo.com");
             }}
           />
-          <div style={{ fontSize: "25px" }}>ehoover3@yahoo.com</div>
+          <div style={{ fontSize: "20px" }}>ehoover3@yahoo.com</div>
           <EmailToast handleToast={handleToast} show={show} style={style} />
         </div>
       </div>
