@@ -68,8 +68,8 @@ export default function App() {
     <div style={{ backgroundColor: theme.style.backgroundColor }}>
       <NavigationBar theme={theme} />
       <Home theme={theme} handleTheme={handleTheme} />
-      <About theme={theme} handleTheme={handleTheme} />
       <Projects theme={theme} handleTheme={handleTheme} />
+      <About theme={theme} handleTheme={handleTheme} />
       <ContactMe theme={theme} handleTheme={handleTheme} />
     </div>
   );

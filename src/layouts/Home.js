@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 export default function Home(props) {
   const theme = props.theme;
   const handleTheme = props.handleTheme;
+
   const titleStyle = {
     fontSize: "100px",
     display: "flex",
@@ -16,6 +17,7 @@ export default function Home(props) {
 
   return (
     <div
+      id='home'
       style={{
         display: "flex",
         flexDirection: "column",
